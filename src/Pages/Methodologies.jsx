@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { methodologies, testimonials } from "../Data/data";
+import ClassTable from "../Components/ClassTable";
 
 function Methodologies() {
 
@@ -13,9 +14,9 @@ function Methodologies() {
     return (
         <div className="methodologies">
 
-            <div className="methodologies-intro">
+            <div className="m-intro">
                 <h3>As Nossas Metodologias de Ensino:</h3>
-                <div className="methodologies-titles">
+                <div className="m-titles">
 
                     {/* Map através das metodologias para originar botões com titulo */}
                     {methodologies.map((methodology, index) => (
@@ -33,9 +34,12 @@ function Methodologies() {
                 ))}
             </div>
 
-            <img />
+            <div className="m-class-table">
+                <h3>Ano letivo 2023/2024</h3>
+                <ClassTable />
+            </div>
 
-            <div className="methodologies-instructors">
+            <div className="m-instructors">
                 <h3>Suporte acessível para as tuas dúvidas</h3>
                 <p>A aprendizagem de uma língua pode trazer questões, e os nossos professores estão aqui para te ajudar.
                     Quer tenhas dificuldades com a gramática, a pronúncia ou o vocabulário, os nossos professores estão disponíveis
@@ -50,7 +54,7 @@ function Methodologies() {
 
             <img />
 
-            <div className="methodologies-testimonials-container">
+            <div className="m-testimonials">
                 <h3>Vê o que nossos alunos pensam</h3>
 
                 {/* map para gerar testemunhos */}
@@ -67,7 +71,7 @@ function Methodologies() {
                 ))}
             </div>
 
-            <div className="methodologies-invitation">
+            <div className="m-invitation">
                 <p>Pronto para experimentar estas metodologias e embarcar numa viagem de aprendizagem de sucesso connosco?</p>
                 <Link to="/signup">Junta-te hoje à nossa plataforma e liberta todo o teu potencial!</Link>
             </div>

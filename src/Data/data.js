@@ -54,10 +54,10 @@ export const methodologies = [
     { name: 'Francês', flag: "" },
     { name: 'Alemão', flag: "" },
     { name: 'Espanhol', flag: "" },
-    { name: 'Português', flag: "" },
     { name: 'Italiano', flag: "" },
     { name: 'Chinês', flag: "" },
     { name: 'Japonês', flag: "" },
     { name: 'Holandês', flag: "" },
-    { name: 'Russo', flag: "" }
+    { name: 'Russo', flag: "" },
+    { name: 'Hindi', flag: ""}
   ];
