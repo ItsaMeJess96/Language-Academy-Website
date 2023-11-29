@@ -12,11 +12,9 @@ function Footer() {
                 </address>
             </div>
             <div className="social-media">
-                <i className="instagram"></i>
-                <i className="facebook"></i>
-                <i className="youtube"></i>
-                <i className="twitter"></i>
-                <i className="whatsapp"></i>
+                <i className="fi fi-brands-facebook"></i>
+                <i className="fi fi-brands-instagram"></i>
+                <i className="fi fi-brands-linkedin"></i>
             </div>
             <ul className="policies">
                 <li>
