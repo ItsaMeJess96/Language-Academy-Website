@@ -16,7 +16,7 @@ function Footer() {
                 <i className="facebook"></i>
                 <i className="youtube"></i>
                 <i className="twitter"></i>
-                <i className="whatsapp"></i>     
+                <i className="whatsapp"></i>
             </div>
             <ul className="policies">
                 <li>
@@ -27,6 +27,9 @@ function Footer() {
                 </li>
                 <li>
                     <Link to="/cookiesPolicy">Política de Cookie</Link>
+                </li>
+                <li>
+                    Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a>
                 </li>
             </ul>
         </footer>
