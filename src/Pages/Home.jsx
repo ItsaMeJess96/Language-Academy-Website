@@ -6,7 +6,7 @@ import iconMessage from '../Assets/Icons/online-lesson.png'
 import iconMundoTalk from '../Assets/Icons/language.png'
 //import slideshow das secções e comentários
 import SectionsSlideshow from "../Components/SectionsSlideshow";
-import CommentsSlideshow from "../Components/Coments";
+import CommentsSlideshow from "../Components/ComentsSlideshow";
 
 function Home() {
     return (

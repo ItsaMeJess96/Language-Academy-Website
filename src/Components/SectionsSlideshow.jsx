@@ -33,7 +33,7 @@ const slides = [
 ]
 const SectionsSlideshow = () => {
 
-    //UseState para rastrear imagem atual
+    //UseState para rastrear slide atual, iniciar no primeiro
     const [currentSlide, setCurrentSlide] = useState(0);
 
     //Funções para navegar entre os slides
