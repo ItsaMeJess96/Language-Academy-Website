@@ -20,7 +20,7 @@ function NavBar() {
 
 
     return (
-        <nav className="navbar">
+        <nav>
 
             <div className="logo">
                 <Link to="/">Culturália</Link>
