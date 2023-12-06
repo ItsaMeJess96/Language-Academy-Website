@@ -1,4 +1,6 @@
 
+import ExamsTable from "../Components/ExamsTable";
+
 function Exams() {
     return (
         <div className="exams">
@@ -9,6 +11,7 @@ function Exams() {
                     Abaixo estão os detalhes sobre os exames disponíveis para cada língua:
                 </p>
             </div>
+            <ExamsTable />
         </div>
     )
 }
