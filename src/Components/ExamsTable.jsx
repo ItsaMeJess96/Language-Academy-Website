@@ -68,7 +68,7 @@ const examsData = [
 
 function ExamsTable() {
     return (
-        <table>
+        <table className="e-table">
             <thead>
                 <tr>
                     <th>Exame</th>

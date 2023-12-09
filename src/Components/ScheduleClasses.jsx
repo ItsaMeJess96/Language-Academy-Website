@@ -28,7 +28,7 @@ const classesData = [
 
 function ScheduleClasses() {
     return (
-        <table>
+        <table className="m-classes">
             <thead>
                 <tr>
                     <th></th>
