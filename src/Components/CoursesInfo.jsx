@@ -1,0 +1,157 @@
+// Componente para mostrar os diferentes cursos e informação acerca destes
+
+import React, {useState} from "react";
+
+// dados a serem usados
+
+const coursesData = [
+    {
+        img: 'src/Assets/Icons/united-kingdom.png',
+        alt: 'bandeira do Reino Unido',
+        title: 'Inglês',
+        description: [
+            'Inglês Básico:', ' Desenvolve habilidades fundamentais de gramática, vocabulário e comunicação;', ' Ideal para iniciantes que desejam uma base sólida.',
+            'Inglês Intermédio:', ' Aprofunda as tuas habilidades de conversação, leitura e escrita;', ' Prepara-te para situações práticas do dia-a-dia.',
+            'Inglês Avançado:', ' Refina a tua fluência e domina nuances avançadas do idioma;', ' Prepara-te para desafios profissionais e académicos.' 
+        ]
+    },
+    {
+        img: 'src/Assets/Icons/france.png',
+        alt: 'bandeira da França',
+        title: 'Francês',
+        description: [
+            'Francês Básico:', ' Aprende o essencial para interações cotidianas;', ' Explora a cultura francófona de maneira envolvente.',
+            'Francês Intermédio:', ' Desenvolve habilidades de comunicação mais complexas;', ' Conecta-te com a riqueza literária e cultural do francês.',
+            'Francês Avançado:', ' Aperfeiçoa a tua proficiência para contextos académicos e profissionais;', ' Explora oportunidades de trabalho em ambientes francófonos.' 
+        ]
+    },
+    {
+        img: 'src/Assets/Icons/spain.png',
+        alt: 'bandeira de Espanha',
+        title: 'Espanhol',
+        description: [
+            'Espanhol Básico:', ' Adquire as bases essenciais para a comunicação;', ' Explora a diversidade cultural dos países de língua espanhola.',
+            'Espanhol Intermédio:', ' Aprimora as tuas habilidades linguísticas para conversações mais complexas;', ' Prepara-te para viagens e interações sociais.',
+            'Espanhol Avançado:', ' Domina a língua para ambientes profissionais e académicos;', ' Abre portas para oportunidades de carreira global.' 
+        ]
+    },
+    {
+        img: 'src/Assets/Icons/italy.png',
+        alt: 'bandeira de Itália',
+        title: 'Italiano',
+        description: [
+            'Italiano Básico:', ' Introdução à língua e cultura italiana;', ' Desenvolve habilidades práticas para viagens e comunicação simples.',
+            'Italiano Intermédio:', ' Aprofunda-te na gramática e expansão do vocabulário;', ' Explora a riqueza artística e histórica da itália.',
+            'Italiano Avançado:', ' Desenvolve proficiência para interações sofisticadas;', ' Abre portas para oportunidades de trabalho relacionadas à itália.' 
+        ]
+    },
+    {
+        img: 'src/Assets/Icons/germany.png',
+        alt: 'bandeira da Alemanha',
+        title: 'Alemão',
+        description: [
+            'Alemão Básico:', ' Constroi uma base sólida em gramática e vocabulário;', ' Ideal para iniciantes que buscam compreensão básica.',
+            'Alemão Intermédio:', ' Desenvolve habilidades mais avançadas em conversação e escrita;', ' Explora oportunidades de estudo e trabalho na Alemanha.',
+            'Alemão Avançado:', ' Refine as tuas habilidades para situações profissionais e académicas;', ' Abre portas para carreiras em empresas alemãs e organizações internacionais.' 
+        ]
+    },
+    {
+        img: 'src/Assets/Icons/portugal.png',
+        alt: 'bandeira de Portugal',
+        title: 'Português para estrangeiros',
+        description: [
+            'Adquere habilidades necessárias para comunicares eficazmente em português', ' Explora a cultura portuguesa de maneira envolvente.',
+        ]
+    },
+    {
+        img: 'src/Assets/Icons/china.png',
+        alt: 'bandeira da China',
+        title: 'Chinês',
+        description: [
+            'Chinês Básico:', ' Introdução à escrita, pronúncia e gramática;', ' Prepara-te para interações básicas e viagens.'
+        ]
+    },
+    {
+        img: 'src/Assets/Icons/japan.png',
+        alt: 'bandeira do Japão',
+        title: 'Japonês',
+        description: [
+            'Japonês Básico:', ' Introdução à escrita, pronúncia e gramática;', ' Prepara-te para interações básicas e viagens.'
+        ]
+    },
+    {
+        img: 'src/Assets/Icons/india.png',
+        alt: 'bandeira da India',
+        title: 'Hindi',
+        description: [
+            'Hindi Básico:', ' Introdução à escrita, pronúncia e gramática;', ' Prepara-te para interações básicas e viagens.'
+        ]
+    },
+    {
+        img: 'src/Assets/Icons/united-arab-emirates.png',
+        alt: 'bandeira dos emirados árabes unidos',
+        title: 'Árabe',
+        description: [
+            'Árabe Básico:', ' Introdução à escrita, pronúncia e gramática;', ' Prepara-te para interações básicas e viagens.'
+        ]
+    },
+    {
+        img: 'src/Assets/Icons/russia.png',
+        alt: 'bandeira da Russia',
+        title: 'Russo',
+        description: [
+            'Russo Básico:', ' Introdução à escrita, pronúncia e gramática;', ' Prepara-te para interações básicas e viagens.'
+        ]
+    },
+    
+]
+
+// componente que irá mostrar os cursos 
+
+function CoursesInfo() {
+
+    //UseState para rastrear o curso selecionado
+    const [currentCourse, setCurrentCourse] = useState();
+
+    //Função para mostrar o curso
+    const handleCourseClick = (index) => setCurrentCourse(index);
+
+    //Função para organizar as descrições 
+    const renderDescription = () => {
+        //se o currentCourse estiver definido:
+        if (currentCourse !== undefined) {
+            //buscar as descrições e iniciar o grupo vazio
+            const descriptionItems = coursesData[currentCourse].description;
+            const groupedDescription = [];
+
+            //organizar as descrições 3 a 3
+            for (let i=0; i<descriptionItems.length; i+=3) {
+                groupedDescription.push(
+                    <div key={i/3}>
+                        <p>{descriptionItems.slice(i, i+3).join('')}</p>
+                    </div>
+                )
+            }
+            return groupedDescription;
+        }
+        return null;
+    }
+
+    return (
+        <div className="c-info">
+            <div className="c-info-flags">
+                {coursesData.map((course, index) => (
+                    <div key={index} onClick={() => handleCourseClick(index)}>
+                        <img src={course.img} alt={course.alt} />
+                        <p>{course.title}</p>
+                    </div>
+                ))}
+            </div>
+            <div className="c-info-body">
+                {renderDescription()}
+            </div>
+        </div>
+    )
+};
+
+export default CoursesInfo;
