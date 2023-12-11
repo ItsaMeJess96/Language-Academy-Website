@@ -1,3 +1,7 @@
+/* componente que renderiza a navbar das páginas
+em desktop mostra os títulos das outras páginas
+em mobile ou outros ecrans pequenos vai mostrar um icon de menu, que ao ser carregado mostra os títulos das outras páginas*/
+
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 
@@ -21,14 +25,15 @@ function NavBar() {
 
     return (
         <nav>
-
             <div className="logo">
                 <Link to="/">Culturália</Link>
             </div>
 
             {/* Desktop Links */}
             <ul className="desktop-links">
+                {/* Vai mapear pelos links de navegação e renderiza cada elemento */}
                 {navigationLinks.map(({ to, label }) => (
+                    // propriedade key para ajudar o react a identificar cada elemento durante as atualizações
                     <li key={to}>
                         <Link to={to}>{label}</Link>
                     </li>

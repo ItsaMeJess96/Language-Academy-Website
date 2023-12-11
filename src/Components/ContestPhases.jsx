@@ -1,4 +1,4 @@
-// componente para mostrar as fases do concurso
+// componente para mostrar as fases do concurso a partir de um array de dados
 
 //dados das fases do concurso
 
@@ -40,13 +40,15 @@ const phases = [
     }
 ]
 
-// componente para renderizar as fases do concurso
+// renderizar as fases do concurso
 
 function ContestPhases () {
     return (
         <div className="e-phases">
             <h3>Fases do Concurso</h3>
+            {/* Vai mapear pelo array e renderiza um bloco para cada elemento */}
             {phases.map((phase, index) => (
+                // usamos a propriedade key para ajudar o react a identificar cada elemento durante as atualizações
                 <div key={index}>
                     <h4>{phase.title}</h4>
                     <img src={phase.img} alt={phase.alt} />

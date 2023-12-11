@@ -1,6 +1,9 @@
+/*componente que renderiza as metodologias praticadas a partir de um array de dados
+mostra os títulos das metodologias que ao serem clicados irão mostrar informação à cerca dessa metodologia */
+
 import React, {useState} from "react";
 
-//informação dos métodos
+//dados dos métodos
 const methods = [
     {
         title: 'Aulas Presenciais',
@@ -40,6 +43,8 @@ const methods = [
     },
 ]
 
+
+//renderizar as metodologias
 function InteractiveMethodologies () {
 
     //UseState para rastrear o método selecionado, iniciar no primeiro
@@ -51,12 +56,16 @@ function InteractiveMethodologies () {
     return (
         <div className="m-interactive-methods">
             <div className="m-method-titles">
+                {/* Vai mapear pelo array e renderiza um botão para cada título */}
                 {methods.map((method, index) => (
+                    /* usamos a propriedade key para ajudar o react a identificar cada elemento durante as atualizações
+                    ao ser clicado chama a função handleMethodClick que altera o método a ser mostrado*/
                     <button key={index} onClick={() => handleMethodClick(index)}>
                         {method.title}
                     </button>
                 ))}
             </div>
+            {/* container que mostra o método em que o usuário clicou */}
             <div className="m-methods-body">
                 <p>{methods[currentMethod].text}</p>
                 <img 

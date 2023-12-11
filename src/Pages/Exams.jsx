@@ -1,5 +1,7 @@
-import { Link } from 'react-router-dom';
+//Componente que irá renderizar a página que informa à cerca dos exames
 
+import { Link } from 'react-router-dom';
+// import da tabela que dispõe os exames import das fases do concurso
 import ExamsTable from "../Components/ExamsTable";
 import ContestPhases from "../Components/ContestPhases";
 

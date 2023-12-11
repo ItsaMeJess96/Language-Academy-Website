@@ -1,4 +1,6 @@
-// Componente para mostrar os diferentes cursos e informação acerca destes
+/* Componente para mostrar os diferentes cursos e informação acerca destes
+Irão aparecer as bandeiras relativas ao curso, e o nome por baixo
+Quando o usuário carregar na bandeira irá mostar informações à cerca desse curso */
 
 import React, {useState} from "react";
 
@@ -110,15 +112,15 @@ const coursesData = [
 
 function CoursesInfo() {
 
-    //UseState para rastrear o curso selecionado
+    //UseState para rastrear o curso selecionado, inicia vazio
     const [currentCourse, setCurrentCourse] = useState();
 
-    //Função para mostrar o curso
+    //Função para mostrar o curso quando o utilizador carrega na imagem
     const handleCourseClick = (index) => setCurrentCourse(index);
 
     //Função para organizar as descrições 
     const renderDescription = () => {
-        //se o currentCourse estiver definido:
+        //se o currentCourse estiver definido, ou seja, se o utilizador carregou no curso:
         if (currentCourse !== undefined) {
             //buscar as descrições e iniciar o grupo vazio
             const descriptionItems = coursesData[currentCourse].description;
@@ -140,7 +142,9 @@ function CoursesInfo() {
     return (
         <div className="c-info">
             <div className="c-info-flags">
+                {/* Vai mapear pelo array e renderiza um bloco para cada elemento */}
                 {coursesData.map((course, index) => (
+                    // usamos a propriedade key para ajudar o react a identificar cada elemento durante as atualizações
                     <div key={index} onClick={() => handleCourseClick(index)}>
                         <img src={course.img} alt={course.alt} />
                         <p>{course.title}</p>

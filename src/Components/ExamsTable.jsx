@@ -1,4 +1,5 @@
-// Componente Tabela sobre exames
+/* Componente que renderiza uma tabela com informação dos exames disponíveis
+Vai renderizar essa tabela a partir do array de dados, vai agrupar os dados que forem iguais, e criar um elemento fazio para os dados que não exitirem */
 
 // Dados a serem usados na tabela: nome do exame, níveis, data e requisitos (caso não tenha nível, data ou requisitos, colocar info nos requisitos)
 
@@ -78,16 +79,18 @@ function ExamsTable() {
                 </tr>
             </thead>
             <tbody>
-                {/* iterar sobre o array para criar tabela */}
+                {/* iterar sobre o array para criar as filas da tabela */}
                 {examsData.map((exam, index) => (
+                    //// usamos a propriedade key para ajudar o react a identificar cada elemento durante as atualizações
                     <tr key={index}>
                         {/* célula para o nome do exame */}
                         <td>{exam.exam}</td>
                         {/* Célula para nível do exame
                             veririca se é a primeira linha ou se o nível é diferente do anterior */}
                         { (index === 0 || exam.level !== examsData[index-1].level ? (
-                            // se for verdadeiro vai criar uma célula e aplicar rowSpan
+                            // se for verdadeiro vai criar uma célula e aplica rowSpan
                             <td rowSpan={countEqualLevelRows(examsData, index)}>{exam.level}</td>
+                            // se for falso não irá renderizar nenhum elemento
                         ) : null)} 
                         {/* célula para a proxima data*/}
                         <td>{exam.date}</td>
@@ -120,8 +123,8 @@ function countEqualLevelRows(data, currentIndex) {
     return count
 }
 
-// função para contar linhas da tabela com requerimentos iguais
-// semelhante à anterior, apenas aplicar para requirements
+/* função para contar linhas da tabela com requerimentos iguais
+ semelhante à anterior, apenas aplicar para requirements */
 function countEqualRequirementsRows(data, currentIndex) {
     let count = 1;
     for (let i = currentIndex + 1; i < data.length; i++) {

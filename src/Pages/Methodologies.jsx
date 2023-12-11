@@ -1,3 +1,5 @@
+//Componente que irá renderizar a página em que apresenta as metodologias 
+
 //import icons
 import iconTradução from '../Assets/Icons/translation.png'
 //import tabela com horário e metodologias interativas

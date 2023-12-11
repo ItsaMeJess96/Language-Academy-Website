@@ -1,3 +1,5 @@
+// componente que vai renderizar o footer das páginas
+
 import React from "react";
 import { Link } from 'react-router-dom';
 

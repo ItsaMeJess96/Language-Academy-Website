@@ -1,3 +1,6 @@
+/* componente slideshow que mostra brevemente as diferentes secções do website
+o usuário pode navegar entre os slides através das setas de navegação */
+
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 
@@ -31,6 +34,8 @@ const slides = [
         link: '/courses'
     }
 ]
+
+//renderizar os slides
 const SectionsSlideshow = () => {
 
     //UseState para rastrear slide atual, iniciar no primeiro
@@ -40,7 +45,6 @@ const SectionsSlideshow = () => {
     const nextSlide = () => setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
     const previousSlide = () => setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
 
-    //renderizar slideshow
 
     return (
         <div className="h-sections">

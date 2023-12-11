@@ -1,4 +1,4 @@
-// Componente Tabela com horário das aulas
+// Componente que renderiza a tabela com horário das aulas
 
 // Dados das aulas a serem usados (1º tempo, 2º aulas de segunda a sexta):
 const classesData = [
@@ -24,7 +24,7 @@ const classesData = [
     }
 ]
 
-// Função para gerar tabela:
+// renderizar a gerar tabela:
 
 function ScheduleClasses() {
     return (
@@ -40,9 +40,12 @@ function ScheduleClasses() {
                 </tr>
             </thead>
             <tbody>
+                {/* iterar sobre o array para criar as filas da tabela */}
                 {classesData.map((row, index) => (
+                    // usamos a propriedade key para ajudar o react a identificar cada elemento durante as atualizações
                     <tr key={index}>
                         <th>{row.time}</th>
+                        {/* Vai mapear pelo array classes dentro dos dados e renderiza um bloco para cada elemento */}
                         {row.classes.map((subject, i) => (
                             <td key={i}>{subject}</td>
                         ))}

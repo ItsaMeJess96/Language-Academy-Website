@@ -1,3 +1,5 @@
+//Componente que irá renderizar a home page
+
 import { Link } from 'react-router-dom';
 //import icons
 import iconMundo from '../Assets/Icons/languages.png';

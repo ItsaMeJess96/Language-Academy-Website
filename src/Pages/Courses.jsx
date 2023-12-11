@@ -1,5 +1,9 @@
+//Componente que irá renderizar a página que apresenta os cursos disponíveis
+
 import { Link } from 'react-router-dom';
+//import icon
 import iconPoliglota from '../Assets/Icons/bilingual.png';
+//import dos cursos disponíveis e sua informação
 import CoursesInfo from '../Components/CoursesInfo';
 
 function Courses() {
