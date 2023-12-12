@@ -17,7 +17,7 @@ function MapContainer () {
     }
 
     return (
-        <LoadScript googleMapsApiKey="AIzaSyBuCjayOslvEKH5T74yVawhhU5pEQG8I0s">
+        <LoadScript googleMapsApiKey="AIzaSyDwyvgiH-400qeQgWBD5daE2VC34siAPQs">
             <GoogleMap zoom={14} center={defaultCenter} mapContainerStyle={mapStyle}>
                 <Marker position={defaultCenter} />
             </GoogleMap>

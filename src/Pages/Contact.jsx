@@ -8,12 +8,12 @@ function Contact() {
         <div className="contact">
             <div className="c-message">
                 <h3>Tens alguma dúvida? Entra em contacto connosco!</h3>
-                <from>
+                <form>
                     <input type="text" name="name" placeholder="nome" />
                     <input type="email" name="name" placeholder="e-mail" />
                     <textarea name="message"></textarea>
                     <input type="submit" value="submeter" />
-                </from>
+                </form>
             </div>
             <div className="c-location">
                 <p>Podes encontrar-nos em:</p>
