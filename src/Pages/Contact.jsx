@@ -9,9 +9,9 @@ function Contact() {
             <div className="c-message">
                 <h3>Tens alguma dúvida? Entra em contacto connosco!</h3>
                 <form>
-                    <input type="text" name="name" placeholder="nome" />
-                    <input type="email" name="name" placeholder="e-mail" />
-                    <textarea name="message"></textarea>
+                    <input type="text" name="name" placeholder="nome" id="c-name" required/>
+                    <input type="email" name="name" placeholder="e-mail" id="c-email" required />
+                    <textarea name="message" id="c-message" required ></textarea>
                     <input type="submit" value="submeter" />
                 </form>
             </div>
