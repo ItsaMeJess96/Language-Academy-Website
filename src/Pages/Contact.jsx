@@ -1,17 +1,53 @@
 // página de contacto
 
+import { useState } from "react";
 //import do mapa
 import MapContainer from "../Components/Map";
 
 function Contact() {
+
+    // iniciar o useState
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: '',
+    });
+
+    // função a ser chamada quando ocorre uma mudança
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    /* função a ser chamada quando o formulário é enviado
+     previne o comportamento padrão e faz solicitação POST para o <servidor></servidor> */ 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch('http://localhost:3000/enviar-email', {
+                method: 'POST',
+                hearders: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+            if (response.ok) {
+                console.log('Email enviado com sucesso!');
+            } else {
+                console.error('Erro ao enviar o email.');
+            }
+        } catch (error) {
+            console.error('Erro inesperado: ', error)
+        } 
+    };
+    
+
     return (
         <div className="contact">
             <div className="c-message">
                 <h3>Tens alguma dúvida? Entra em contacto connosco!</h3>
-                <form>
-                    <input type="text" name="name" placeholder="nome" id="c-name" required/>
-                    <input type="email" name="name" placeholder="e-mail" id="c-email" required />
-                    <textarea name="message" id="c-message" required ></textarea>
+                <form onSubmit={handleSubmit}>
+                    <input type="text" name="name" placeholder="nome" id="c-name" required onChange={handleChange}/>
+                    <input type="email" name="name" placeholder="e-mail" id="c-email" required onChange={handleChange}/>
+                    <textarea name="message" id="c-message" required onChange={handleChange}></textarea>
                     <input type="submit" value="submeter" />
                 </form>
             </div>
