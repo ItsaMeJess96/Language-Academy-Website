@@ -17,7 +17,7 @@ function MapContainer () {
     }
 
     return (
-        <LoadScript googleMapsApiKey="AIzaSyDwyvgiH-400qeQgWBD5daE2VC34siAPQs">
+        <LoadScript googleMapsApiKey={import.meta.env.VITE_REACT_APP_GOOGLE_MAPS_API_KEY}>
             <GoogleMap zoom={14} center={defaultCenter} mapContainerStyle={mapStyle}>
                 <Marker position={defaultCenter} key='marker'/>
             </GoogleMap>
