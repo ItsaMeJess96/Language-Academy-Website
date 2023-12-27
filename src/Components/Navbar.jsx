@@ -4,6 +4,7 @@ em mobile ou outros ecrans pequenos vai mostrar um icon de menu, que ao ser carr
 
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
+import '../Styles/Navbar.css';
 
 function NavBar() {
 
