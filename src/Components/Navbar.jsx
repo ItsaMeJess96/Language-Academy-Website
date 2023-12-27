@@ -40,26 +40,27 @@ function NavBar() {
                     </li>
                 ))}
             </ul>
+            <div className="join-entry-icon">
+                <div className="user-entry">
+                    <Link className="login" to="/login">Log In</Link>
+                    <Link className="signup" to="/signup">Registo</Link>
+                </div>
 
-            <div className="user-entry">
-                <Link className="login" to="/login">Log In</Link>
-                <Link className="signup" to="/signup">Registo</Link>
-            </div>
-
-            {/* Mobile Links */}
-            <div className="mobile-menu-icon" onClick={toggleDropdown}>
-                <i className="fi fi-br-menu-burger"></i>
-                {/* Se for clicado vai renderizar links */}
-                {isDropdownOpen && (
-                    <ul className="mobile-links">
-                        {navigationLinks.map(({ to, label }) => (
-                            <li key={to}>
-                                {/* Cada link fecha o dropdown ao ser clicado */}
-                                <Link to={to} onClick={toggleDropdown}>{label}</Link>
-                            </li>
-                        ))}
-                    </ul>
-                )}
+                {/* Mobile Links */}
+                <div className="mobile-menu-icon" onClick={toggleDropdown}>
+                    <i className="fi fi-br-menu-burger"></i>
+                    {/* Se for clicado vai renderizar links */}
+                    {isDropdownOpen && (
+                        <ul className="mobile-links">
+                            {navigationLinks.map(({ to, label }) => (
+                                <li key={to}>
+                                    {/* Cada link fecha o dropdown ao ser clicado */}
+                                    <Link to={to} onClick={toggleDropdown}>{label}</Link>
+                                </li>
+                            ))}
+                        </ul>
+                    )}
+                </div>
             </div>
         </nav>
     );
