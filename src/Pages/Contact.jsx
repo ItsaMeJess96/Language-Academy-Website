@@ -46,7 +46,7 @@ function Contact() {
                 <h3>Tens alguma dúvida? Entra em contacto connosco!</h3>
                 <form onSubmit={handleSubmit}>
                     <input type="text" name="name" placeholder="nome" id="c-name" required onChange={handleChange}/>
-                    <input type="email" name="name" placeholder="e-mail" id="c-email" required onChange={handleChange}/>
+                    <input type="email" name="email" placeholder="e-mail" id="c-email" required onChange={handleChange}/>
                     <textarea name="message" id="c-message" required onChange={handleChange}></textarea>
                     <input type="submit" value="submeter" />
                 </form>
