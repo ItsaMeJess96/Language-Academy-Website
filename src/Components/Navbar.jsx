@@ -27,35 +27,35 @@ function NavBar() {
     return (
         <nav>
             <div className="logo">
-                <Link to="/">Culturália</Link>
+                <Link to="/" className="nav-links">Culturália.</Link>
             </div>
 
             {/* Desktop Links */}
-            <ul className="desktop-links">
+            <ul className="desktop-links-container">
                 {/* Vai mapear pelos links de navegação e renderiza cada elemento */}
                 {navigationLinks.map(({ to, label }) => (
                     // propriedade key para ajudar o react a identificar cada elemento durante as atualizações
-                    <li key={to}>
-                        <Link to={to}>{label}</Link>
+                    <li key={to} className="desktop-links">
+                        <Link to={to} className="nav-links">{label}</Link>
                     </li>
                 ))}
             </ul>
             <div className="join-entry-icon">
                 <div className="user-entry">
                     <Link className="login" to="/login">Log In</Link>
-                    <Link className="signup" to="/signup">Registo</Link>
+                    <Link className="signup" to="/signup" >Registo</Link>
                 </div>
 
                 {/* Mobile Links */}
                 <div className="mobile-menu-icon" onClick={toggleDropdown}>
-                    <i className="fi fi-br-menu-burger"></i>
+                    <i className="fi fi-br-menu-burger" ></i>
                     {/* Se for clicado vai renderizar links */}
                     {isDropdownOpen && (
-                        <ul className="mobile-links">
+                        <ul className="mobile-links-container">
                             {navigationLinks.map(({ to, label }) => (
                                 <li key={to}>
                                     {/* Cada link fecha o dropdown ao ser clicado */}
-                                    <Link to={to} onClick={toggleDropdown}>{label}</Link>
+                                    <Link className="mobile-links" to={to}>{label}</Link>
                                 </li>
                             ))}
                         </ul>

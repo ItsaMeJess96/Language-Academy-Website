@@ -3,22 +3,85 @@ nav {
     display: flex;
     background-color: #3B6087;
     justify-content: space-between;
-    padding: 16px;
+    padding: 1em max(1em, 2vw);
     align-items: center;
-    height: 32px;
     width: 100%;
+    box-sizing: border-box;
 }
 
-.desktop-links {
-    list-style-type: none;
-    display: flex;
-    padding: 0;
+.nav-links, .login, .signup {
+    text-decoration: none;
+    color: #FAF8F8;
+    font-size: clamp(1em, 1.25em, 1.5em);
 }
 
 .join-entry-icon {
     display: flex;
+    align-items: center;
 }
 
+.logo {
+    font-size: 1.5em;
+}
+/*icon menu*/
+
+.fi-br-menu-burger::before {
+    display: flex;
+    align-items: center;
+    font-size: 2.5em;
+    color: #FAF8F8;
+    padding-left: 0.6em;
+}
+
+/*dropdown menu*/
+.mobile-menu-icon {
+    position: relative;
+    float: right;
+}
+
+.mobile-links-container {
+    position: absolute;
+    list-style-type: none;
+    background-color: #3B6087;
+    z-index: 1;
+    right: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.mobile-links {
+    text-decoration: none;
+    color: #FAF8F8;
+    padding: 0.5em;
+    display: block;
+    text-align: end;
+    font-size: 1.1em;
+}
+
+
+/*configurar links*/
+.desktop-links-container {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.desktop-links {
+    padding: 0 clamp(0.3vw, 1vw, 3vw);
+    
+}
+
+/*configurar login e signup*/
+
+.login {
+    padding-right: 0.5em;
+}
+
+.signup {
+    background-color: #AAD8DE;
+    padding: 0.4em;
+    border-radius: 8px;
+    color: #141414;
+}
 
 /*configurações desktop*/
 @media screen and (min-width: 800px) {
