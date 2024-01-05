@@ -2,6 +2,7 @@
 nav {
     display: flex;
     background-color: #3B6087;
+    border: #3B6087 solid;
     justify-content: space-between;
     padding: 1em max(1em, 2vw);
     align-items: center;
@@ -12,7 +13,6 @@ nav {
 .nav-links, .login, .signup {
     text-decoration: none;
     color: #FAF8F8;
-    font-size: clamp(1em, 1.25em, 1.5em);
 }
 
 .join-entry-icon {
@@ -79,7 +79,7 @@ nav {
 .signup {
     background-color: #AAD8DE;
     padding: 0.4em;
-    border-radius: 8px;
+    border-radius: 16px;
     color: #141414;
 }
 

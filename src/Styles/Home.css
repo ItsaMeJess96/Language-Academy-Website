@@ -1,0 +1,221 @@
+/*secção inicial*/
+.h-intro {
+    display: flex;
+    flex-direction: column;
+    background-color: #3B6087;
+    border: #3B6087 solid;
+}
+
+.h-intro-welcome {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em 0;
+    background-color: #3B6087;
+}
+
+.h-intro-message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.h-intro-message h2 {
+    font-size: 4vw;
+    font-weight: 500;
+    color: #FAF8F8;
+
+}
+
+#icon-mundo {
+    width: 40%;
+}
+
+.h-intro-invitation {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+}
+
+.h-intro-invitation p {
+    text-align: center;
+    padding-bottom: 1em;
+    color: #FAF8F8;
+}
+
+#h-start-btn {
+    background-color: #AAD8DE;
+    padding: 0.5em;
+    border-radius: 16px;
+    color: #141414;
+    text-decoration: none;
+}
+
+/*mensagem dinamica exames*/
+
+.h-message {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
+
+#icon-pc {
+    width: 20%;
+    padding-right: 3em;
+}
+
+.h-m-exams {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#see-all-btn {
+    align-self: flex-end;
+    text-decoration: none;
+    color: #FABD62;
+}
+
+/*slideshow com as secções*/
+
+.h-sections {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.h-sections-img {
+    position: absolute;
+    width: 15%; 
+    height: 100%; 
+    object-fit: cover;
+    left: 1.7em;
+}
+
+.h-sections-content {
+    width: 80%;
+    box-sizing: border-box;
+    padding: 1em;
+    background-color: #3B6087;
+    color: #FAF8F8;
+    margin-left: 15%;
+}
+
+.h-sections-content h3 {
+    font-weight: 500;
+    padding-bottom: 0.3em;
+}
+
+.h-sections-content :last-child {
+    padding-top: 0.3em;
+    font-size: 0.8em;
+}
+
+.section-link {
+    text-decoration: none;
+    color: #FABD62;
+}
+
+.arrow-left, .arrow-right {
+    color: #5C7389;
+    padding: 0.3em;
+}
+
+/*secção convite*/
+
+.h-invitation {
+    text-align: center;
+    padding: 1em 2em;
+}
+
+.h-i-connect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+}
+
+#icon-message-mundo {
+    width: 20%;
+}
+
+#home-contact-link {
+    text-decoration: none;
+    background-color: #AAD8DE;
+    color: #141414;
+    padding: 0.5em;
+    border-radius: 16px;
+    margin-left: 2em;
+}
+
+/*secção de feedback*/
+
+.h-feedback {
+    display: flex;
+    padding: 1em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.h-feedback-content {
+    padding: 1em;
+    text-align: center;
+}
+
+.h-feedback-content h3 {
+    padding-bottom: 0.5em;
+}
+
+/*configuração desktop*/
+
+@media screen and (min-width: 800px) {
+    .arrow-left {
+       margin: 0 1em 0 5em;
+    }
+    .arrow-right {
+        margin: 0 5em 0 1em;
+    }
+    .h-sections-img {
+        left: 7.7em;
+    }
+    .h-sections-content {
+        padding: 3em;
+    }
+    .h-sections-content-text {
+        line-height: 1.5;
+        font-size: large;
+        padding: 1em;
+    }
+
+    .h-sections-content :last-child {
+        padding-top: 1em;
+        font-size: 1em;
+    }
+    .h-sections-content h3 {
+        font-size: 1.5em;
+        padding-left: 0.7em;
+    }
+    .h-m-exams {
+        font-size: larger;
+        line-height: 2;
+    }
+    .h-invitation {
+        margin: 2em 5em 0 5em;
+    }
+    #icon-message-mundo {
+        width: 10%;
+    }
+    .h-intro-invitation {
+        font-size: larger;
+    }
+    .h-invitation :first-child {
+        margin-bottom: 1em;
+    }
+}

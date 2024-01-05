@@ -49,19 +49,17 @@ const SectionsSlideshow = () => {
     return (
         <div className="h-sections">
             {/* Navegar para slide anterior */}
-            <i className="fi fi-ss-angle-left" onClick={previousSlide}></i>
+            <i className="fi fi-ss-angle-left arrow-left" onClick={previousSlide}></i>
             {/* Imagem do slide */}
-            <div className="h-sections-img">
-                <img src={slides[currentSlide].url} alt={slides[currentSlide].alt} />
-            </div>
+                <img className="h-sections-img" src={slides[currentSlide].url} alt={slides[currentSlide].alt} />
             {/* Conteúdo do slide */}
             <div className="h-sections-content">
-                <h3>{slides[currentSlide].title}</h3>
-                <p>{slides[currentSlide].text}</p>
-                <p>{slides[currentSlide].finalMessage}<Link to={slides[currentSlide].link}>{slides[currentSlide].cardTitle}</Link></p>
+                <h3 className="h-sections-content-text">{slides[currentSlide].title}</h3>
+                <p className="h-sections-content-text">{slides[currentSlide].text}</p>
+                <p className="h-sections-content-text">{slides[currentSlide].finalMessage}<Link className="section-link" to={slides[currentSlide].link}>{slides[currentSlide].cardTitle}</Link></p>
             </div>
             {/* Navegar para proximo slide */}
-            <i className="fi fi-ss-angle-right" onClick={nextSlide}></i>
+            <i className="fi fi-ss-angle-right arrow-right" onClick={nextSlide}></i>
         </div>
     )
 }

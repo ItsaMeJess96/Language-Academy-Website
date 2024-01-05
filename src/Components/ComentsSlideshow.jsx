@@ -32,7 +32,7 @@ const CommentsSlideshow = () => {
     return (
         <div className="h-feedback">
             {/* Navegar para comentário anterior */}
-            <i className="fi fi-ss-angle-left" onClick={previousComment}></i>
+            <i className="fi fi-ss-angle-left arrow-left" onClick={previousComment}></i>
             {/* Conteúdo do slide */}
             <div className="h-feedback-content">
                 <h3>Vê o feedback dos nossos alunos!</h3>
@@ -42,7 +42,7 @@ const CommentsSlideshow = () => {
                 </div>
             </div>
             {/* Navegar para proximo comentário */}
-            <i className="fi fi-ss-angle-right" onClick={nextComment}></i>
+            <i className="fi fi-ss-angle-right arrow-right" onClick={nextComment}></i>
         </div>
     )
 }
