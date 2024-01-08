@@ -1,0 +1,109 @@
+.methodologies {
+    padding: 1em;
+}
+/*secção inicial*/
+.m-intro {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1em;
+}
+
+#icon-translation {
+    width: 30%;
+    height: auto;
+    object-fit: contain;
+    padding-left: 0.5em;
+}
+
+/*tabela com aulas*/
+
+.m-table {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-x: auto;
+    box-sizing: border-box;
+    padding-bottom: 1em;
+}
+
+
+.m-classes th {
+    border: 1px solid #5C7389;
+}
+
+.m-classes td {
+    border: 1px solid #AAD8DE;
+}
+
+.m-classes {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/*secção final*/
+
+.m-methods-text {
+    padding: 1em 0;
+    text-align: center;
+}
+
+/*apresentação das metodologias*/
+
+.m-interactive-methods {
+    display: flex;
+    border: solid 1px #FABD62;
+}
+
+.m-method-titles {
+    display: flex;
+    flex-direction: column;
+    background-color: #5C7389;
+    justify-content: space-evenly;
+}
+
+.m-method-titles button {
+    border: #FABD62 1px solid;
+    padding: 0.5em;
+    height: 100%;
+}
+
+.m-methods-body {
+    padding: 1em;
+}
+
+.m-m-img {
+    width: 40%;
+    float: inline-end;
+    padding: 0.5em;
+}
+
+/*configurações desktop*/
+
+@media screen and (min-width: 800px) {
+    #icon-translation {
+        width: 10%;
+    }
+    .m-intro {
+        padding: 1em 5em;
+    }
+    .m-methods {
+        padding: 1em 5em;
+    }
+    .m-method-titles button {
+        font-size: 1em;
+    }
+    .m-m-img {
+        width: 20%;
+    }
+   .m-methods-body {
+    display: flex;
+    align-items: center;
+    width: 100%;
+   }
+   .m-method-titles {
+    width: 30%;
+   }
+   .m-methods-body p {
+    font-size: large;
+   }
+}

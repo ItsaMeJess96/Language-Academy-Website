@@ -1,7 +1,7 @@
 /*componente que renderiza as metodologias praticadas a partir de um array de dados
 mostra os títulos das metodologias que ao serem clicados irão mostrar informação à cerca dessa metodologia */
 
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 //dados dos métodos
 const methods = [
@@ -45,7 +45,7 @@ const methods = [
 
 
 //renderizar as metodologias
-function InteractiveMethodologies () {
+function InteractiveMethodologies() {
 
     //UseState para rastrear o método selecionado, iniciar no primeiro
     const [currentMethod, setCurrentMethod] = useState(0);
@@ -60,18 +60,25 @@ function InteractiveMethodologies () {
                 {methods.map((method, index) => (
                     /* usamos a propriedade key para ajudar o react a identificar cada elemento durante as atualizações
                     ao ser clicado chama a função handleMethodClick que altera o método a ser mostrado*/
-                    <button key={index} onClick={() => handleMethodClick(index)}>
+                    <button
+                        key={index}
+                        onClick={() => handleMethodClick(index)}
+                        style={{
+                            backgroundColor: index === currentMethod ? "#AAD8DE" : "#5C7389",
+                            color: index === currentMethod ? "#141414" : "#FAF8F8"
+                        }}
+                    >
                         {method.title}
                     </button>
                 ))}
             </div>
             {/* container que mostra o método em que o usuário clicou */}
             <div className="m-methods-body">
-                <p>{methods[currentMethod].text}</p>
-                <img 
-                    src={methods[currentMethod].img} 
-                    alt={methods[currentMethod].alt} 
+                <img className="m-m-img"
+                    src={methods[currentMethod].img}
+                    alt={methods[currentMethod].alt}
                 />
+                <p>{methods[currentMethod].text}</p>
             </div>
         </div>
     )

@@ -167,6 +167,8 @@
 .h-feedback-content {
     padding: 1em;
     text-align: center;
+    background-color: #AAD8DE;
+    border-radius: 16px;
 }
 
 .h-feedback-content h3 {
