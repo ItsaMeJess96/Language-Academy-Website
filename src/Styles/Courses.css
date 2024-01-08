@@ -1,0 +1,114 @@
+.courses {
+    padding: 1em;
+}
+
+.c-intro {
+    text-align: center;
+    padding: 1em 0;
+}
+
+/*informação dos cursos*/
+
+.c-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.c-info-flags {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.c-flag-container {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2em;
+}
+
+.c-flag-img {
+    width: 90%;
+}
+
+.c-flag-text {
+    padding: 0.2em;
+}
+
+.c-info-body {
+    background-color: #3B6087;
+    color: #FAF8F8;
+    padding: 1em;
+    margin: 1em 0;
+    line-height: 2;
+    font-size: large;
+}
+
+/*secção de oportunidades*/
+
+.c-opportunities-container, .c-opportunitie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-opportunities-container p {
+    text-align: center;
+}
+
+/*convite final*/
+
+.c-invite {
+    padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#icon-poliglota {
+    width: 100%;
+}
+
+.c-invite p {
+    padding-top: 1em;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#courses-link {
+    text-decoration: none;
+    color: #FABD62;
+}
+
+/*configurações desktop*/
+
+@media screen and (min-width: 800px) {
+    .courses {
+        margin: 1em 10em;
+    }
+    .c-intro {
+        padding-bottom: 5em;
+        font-size: larger;
+    }
+    .c-flag-container {
+        width: 15%;
+    }
+    .c-opportunities-container {
+        font-size: large;
+        padding: 3em 0;
+    }
+    #icon-poliglota {
+        width: 50%;
+    }
+    .c-invite p {
+        padding-top: 3em;
+        font-size: larger
+    }
+}

@@ -60,9 +60,9 @@ const coursesData = [
     {
         img: 'src/Assets/Icons/portugal.png',
         alt: 'bandeira de Portugal',
-        title: 'Português para estrangeiros',
+        title: 'Português',
         description: [
-            'Adquere habilidades necessárias para comunicares eficazmente em português', ' Explora a cultura portuguesa de maneira envolvente.',
+            'Português para estrangeiros:', 'Adquere habilidades necessárias para comunicares eficazmente em português', ' Explora a cultura portuguesa de maneira envolvente.',
         ]
     },
     {
@@ -130,8 +130,12 @@ function CoursesInfo() {
             for (let i=0; i<descriptionItems.length; i+=3) {
                 groupedDescription.push(
                     <div key={i/3}>
-                        <p>{descriptionItems.slice(i, i+3).join('')}</p>
-                    </div>
+                    <p>
+                        <strong>{descriptionItems[i]}</strong>{' '}
+                        {descriptionItems[i + 1]}{' '}
+                        {descriptionItems[i + 2]}
+                    </p>
+                </div>
                 )
             }
             return groupedDescription;
@@ -145,9 +149,9 @@ function CoursesInfo() {
                 {/* Vai mapear pelo array e renderiza um bloco para cada elemento */}
                 {coursesData.map((course, index) => (
                     // usamos a propriedade key para ajudar o react a identificar cada elemento durante as atualizações
-                    <div key={index} onClick={() => handleCourseClick(index)}>
-                        <img src={course.img} alt={course.alt} />
-                        <p>{course.title}</p>
+                    <div className="c-flag-container" key={index} onClick={() => handleCourseClick(index)}>
+                        <img className="c-flag-img" src={course.img} alt={course.alt} />
+                        <p className="c-flag-text">{course.title}</p>
                     </div>
                 ))}
             </div>
