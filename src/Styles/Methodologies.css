@@ -1,6 +1,7 @@
 .methodologies {
     padding: 1em;
 }
+
 /*secção inicial*/
 .m-intro {
     display: flex;
@@ -18,21 +19,22 @@
 /*tabela com aulas*/
 
 .m-table {
-    display: flex;
-    justify-content: center;
     width: 100%;
     overflow-x: auto;
     box-sizing: border-box;
     padding-bottom: 1em;
 }
 
-
 .m-classes th {
-    border: 1px solid #5C7389;
+    border: 1px solid #AAD8DE;
+    padding: 0.3em;
+    background-color: #3B6087;
+    color: #FAF8F8;
 }
 
 .m-classes td {
     border: 1px solid #AAD8DE;
+    padding: 0.3em;
 }
 
 .m-classes {
@@ -57,7 +59,7 @@
 .m-method-titles {
     display: flex;
     flex-direction: column;
-    background-color: #5C7389;
+    background-color: #3B6087;
     justify-content: space-evenly;
 }
 
@@ -83,27 +85,51 @@
     #icon-translation {
         width: 10%;
     }
+
     .m-intro {
-        padding: 1em 5em;
+        padding: 2em 10em;
+        font-size: larger;
     }
+
     .m-methods {
         padding: 1em 5em;
     }
+
     .m-method-titles button {
         font-size: 1em;
     }
+
     .m-m-img {
         width: 20%;
     }
-   .m-methods-body {
-    display: flex;
-    align-items: center;
-    width: 100%;
-   }
-   .m-method-titles {
-    width: 30%;
-   }
-   .m-methods-body p {
-    font-size: large;
-   }
+    
+    .m-methods-text {
+        font-size: larger;
+        padding: 2em 8em;
+    }
+
+    .m-methods-body {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .m-method-titles {
+        width: 30%;
+    }
+
+    .m-methods-body p {
+        font-size: x-large;
+    }
+
+    .m-interactive-methods {
+        margin: 2em 7em;
+        font-size: larger;
+    }
+
+    .m-table {
+        display: flex;
+        justify-content: center;
+    }
+
 }

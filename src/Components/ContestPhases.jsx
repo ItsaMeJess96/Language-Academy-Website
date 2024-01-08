@@ -44,16 +44,20 @@ const phases = [
 
 function ContestPhases () {
     return (
-        <div className="e-phases">
+        <div className="e-phases-container">
             <h3>Fases do Concurso</h3>
             {/* Vai mapear pelo array e renderiza um bloco para cada elemento */}
             {phases.map((phase, index) => (
                 // usamos a propriedade key para ajudar o react a identificar cada elemento durante as atualizações
-                <div key={index}>
+                <div key={index} className="e-phases">
                     <h4>{phase.title}</h4>
-                    <img src={phase.img} alt={phase.alt} />
-                    <p>{phase.text1}</p>
-                    <p>{phase.text2}</p>
+                    <div className="e-phases-content">
+                        <img className="e-phases-img" src={phase.img} alt={phase.alt} />
+                        <div className="e-phases-text">
+                            <p>{phase.text1}</p>    
+                            <p>{phase.text2}</p>
+                        </div>
+                    </div>
                 </div>
             ))}
         </div>

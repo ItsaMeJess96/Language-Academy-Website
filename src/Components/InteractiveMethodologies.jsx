@@ -64,7 +64,7 @@ function InteractiveMethodologies() {
                         key={index}
                         onClick={() => handleMethodClick(index)}
                         style={{
-                            backgroundColor: index === currentMethod ? "#AAD8DE" : "#5C7389",
+                            backgroundColor: index === currentMethod ? "#AAD8DE" : "#3B6087",
                             color: index === currentMethod ? "#141414" : "#FAF8F8"
                         }}
                     >

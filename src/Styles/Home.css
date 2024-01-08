@@ -179,20 +179,20 @@
 
 @media screen and (min-width: 800px) {
     .arrow-left {
-       margin: 0 1em 0 5em;
+       margin: 0 1em 0 10em;
     }
     .arrow-right {
-        margin: 0 5em 0 1em;
+        margin: 0 10em 0 1em;
     }
     .h-sections-img {
-        left: 7.7em;
+        left: 12.7em;
     }
     .h-sections-content {
         padding: 3em;
     }
     .h-sections-content-text {
         line-height: 1.5;
-        font-size: large;
+        font-size: larger;
         padding: 1em;
     }
 
@@ -204,18 +204,24 @@
         font-size: 1.5em;
         padding-left: 0.7em;
     }
+    .h-message {
+        padding: 5em 0;
+    }
     .h-m-exams {
-        font-size: larger;
+        font-size: x-large;
         line-height: 2;
     }
     .h-invitation {
-        margin: 2em 5em 0 5em;
+        margin: 5em 10em 03em 10em;
+        font-size: larger;
+        line-height: 1.5;
     }
     #icon-message-mundo {
         width: 10%;
     }
     .h-intro-invitation {
-        font-size: larger;
+        font-size: x-large;
+        padding: 2em 10em;
     }
     .h-invitation :first-child {
         margin-bottom: 1em;

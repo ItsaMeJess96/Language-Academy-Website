@@ -74,7 +74,7 @@ function ExamsTable() {
                 <tr>
                     <th>Exame</th>
                     <th>Níveis</th>
-                    <th>Prox. Data</th>
+                    <th>Prox.Data</th>
                     <th>Requisitos</th>
                 </tr>
             </thead>
@@ -84,7 +84,7 @@ function ExamsTable() {
                     //// usamos a propriedade key para ajudar o react a identificar cada elemento durante as atualizações
                     <tr key={index}>
                         {/* célula para o nome do exame */}
-                        <td>{exam.exam}</td>
+                        <th>{exam.exam}</th>
                         {/* Célula para nível do exame
                             veririca se é a primeira linha ou se o nível é diferente do anterior */}
                         { (index === 0 || exam.level !== examsData[index-1].level ? (
