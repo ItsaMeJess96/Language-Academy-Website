@@ -1,19 +1,23 @@
 // página em que o usuário se pode inscrever na plataforma
 
+import '../Styles/LogIn&SignUp.css'
 import iconPC from '../Assets/Icons/online-lesson2.png'
 
 function SignUp() {
     return (
         <div className="sign-up">
             <div className='s-intro'>
-                <h3>Resgista-te na nossa plataforma!</h3>
-                <p>
-                    Damos-te as boas vindas à Culturália!
-                    Regista-te para começares a tua jornada de aprendizagem de línguas.
-                </p>
+                <div>
+                    <h3>Resgista-te na nossa plataforma!</h3>
+                    <p>
+                        Damos-te as boas vindas à Culturália!
+                        Regista-te para começares a tua jornada de aprendizagem de línguas.
+                    </p>
+                </div>
+                <img id='icon-signUp' src={iconPC} alt="ecrã a mostrar aula online" />
             </div>
-            <div className='s-form'>
-                <form>
+            <div className='s-form-container'>
+                <form  className='s-form'>
                     <label htmlFor='username'>Nome de utilizador:</label>
                     <input type='text' id='s-username' name='username' required />
                     <label htmlFor='email'>Email:</label>
@@ -24,7 +28,6 @@ function SignUp() {
                     <input type='password' id='s-password-repeat' name='password-repeat' required />
                     <input type="submit" value='Registar' />
                 </form>
-                <img src={iconPC} alt="ecrã a mostrar aula online" />
             </div>
         </div>
     )

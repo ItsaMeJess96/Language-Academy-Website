@@ -1,0 +1,70 @@
+/*Estilos para a página de log in e sign up*/
+
+.log-in, .sign-up {
+    margin: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.l-intro, .s-intro {
+    padding: 1em 0;
+    text-align: center;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.l-form-container, .s-form-container {
+    width: 100%;
+}
+
+.l-form, .s-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.l-form input, .s-form input {
+    font-size: 1em;
+    margin: 0.5em 0;
+}
+
+#icon-logIn, #icon-signUp {
+    width: 20%;
+    margin: 0.5em;
+    height: auto;
+    object-fit: contain;
+}
+
+.l-sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logIn-link {
+    text-decoration: none;
+    color: #FABD62;
+}
+
+.s-intro {
+    display: flex;
+}
+
+/*configurações desktop*/
+
+@media screen and (min-width: 800px) {
+    .l-form, .s-form, .s-intro {
+        width: 60%;
+    }
+    .l-form-container, .s-form-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #icon-logIn, #icon-signUp {
+        width: 10%;
+    }
+}
