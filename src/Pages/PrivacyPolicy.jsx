@@ -2,6 +2,8 @@
 As informações contidas nesta páginas têm caráter puramente ilustrativo e foram incorporadas para enriquecer a experiência do projeto. 
 Elas não possuem validade legal ou relevância em um contexto do mundo real */
 
+import '../Styles/Policies.css';
+
 function privacyPolicy() {
     return (
         <div className="privacy-policy">

@@ -1,0 +1,6 @@
+/*Estilos para as páginas de Politica de privacidade, Aviso legal e Politica de cookies*/
+
+.cookies-policy, .legal-notice, .privacy-policy {
+    margin: 4%;
+    line-height: 2;
+}
