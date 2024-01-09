@@ -2,7 +2,7 @@
 Irão aparecer as bandeiras relativas ao curso, e o nome por baixo
 Quando o usuário carregar na bandeira irá mostar informações à cerca desse curso */
 
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 // dados a serem usados
 
@@ -14,7 +14,7 @@ const coursesData = [
         description: [
             'Inglês Básico:', ' Desenvolve habilidades fundamentais de gramática, vocabulário e comunicação;', ' Ideal para iniciantes que desejam uma base sólida.',
             'Inglês Intermédio:', ' Aprofunda as tuas habilidades de conversação, leitura e escrita;', ' Prepara-te para situações práticas do dia-a-dia.',
-            'Inglês Avançado:', ' Refina a tua fluência e domina nuances avançadas do idioma;', ' Prepara-te para desafios profissionais e académicos.' 
+            'Inglês Avançado:', ' Refina a tua fluência e domina nuances avançadas do idioma;', ' Prepara-te para desafios profissionais e académicos.'
         ]
     },
     {
@@ -24,7 +24,7 @@ const coursesData = [
         description: [
             'Francês Básico:', ' Aprende o essencial para interações cotidianas;', ' Explora a cultura francófona de maneira envolvente.',
             'Francês Intermédio:', ' Desenvolve habilidades de comunicação mais complexas;', ' Conecta-te com a riqueza literária e cultural do francês.',
-            'Francês Avançado:', ' Aperfeiçoa a tua proficiência para contextos académicos e profissionais;', ' Explora oportunidades de trabalho em ambientes francófonos.' 
+            'Francês Avançado:', ' Aperfeiçoa a tua proficiência para contextos académicos e profissionais;', ' Explora oportunidades de trabalho em ambientes francófonos.'
         ]
     },
     {
@@ -34,7 +34,7 @@ const coursesData = [
         description: [
             'Espanhol Básico:', ' Adquire as bases essenciais para a comunicação;', ' Explora a diversidade cultural dos países de língua espanhola.',
             'Espanhol Intermédio:', ' Aprimora as tuas habilidades linguísticas para conversações mais complexas;', ' Prepara-te para viagens e interações sociais.',
-            'Espanhol Avançado:', ' Domina a língua para ambientes profissionais e académicos;', ' Abre portas para oportunidades de carreira global.' 
+            'Espanhol Avançado:', ' Domina a língua para ambientes profissionais e académicos;', ' Abre portas para oportunidades de carreira global.'
         ]
     },
     {
@@ -44,7 +44,7 @@ const coursesData = [
         description: [
             'Italiano Básico:', ' Introdução à língua e cultura italiana;', ' Desenvolve habilidades práticas para viagens e comunicação simples.',
             'Italiano Intermédio:', ' Aprofunda-te na gramática e expansão do vocabulário;', ' Explora a riqueza artística e histórica da itália.',
-            'Italiano Avançado:', ' Desenvolve proficiência para interações sofisticadas;', ' Abre portas para oportunidades de trabalho relacionadas à itália.' 
+            'Italiano Avançado:', ' Desenvolve proficiência para interações sofisticadas;', ' Abre portas para oportunidades de trabalho relacionadas à itália.'
         ]
     },
     {
@@ -54,7 +54,7 @@ const coursesData = [
         description: [
             'Alemão Básico:', ' Constroi uma base sólida em gramática e vocabulário;', ' Ideal para iniciantes que buscam compreensão básica.',
             'Alemão Intermédio:', ' Desenvolve habilidades mais avançadas em conversação e escrita;', ' Explora oportunidades de estudo e trabalho na Alemanha.',
-            'Alemão Avançado:', ' Refine as tuas habilidades para situações profissionais e académicas;', ' Abre portas para carreiras em empresas alemãs e organizações internacionais.' 
+            'Alemão Avançado:', ' Refine as tuas habilidades para situações profissionais e académicas;', ' Abre portas para carreiras em empresas alemãs e organizações internacionais.'
         ]
     },
     {
@@ -105,7 +105,7 @@ const coursesData = [
             'Russo Básico:', ' Introdução à escrita, pronúncia e gramática;', ' Prepara-te para interações básicas e viagens.'
         ]
     },
-    
+
 ]
 
 // componente que irá mostrar os cursos 
@@ -127,15 +127,15 @@ function CoursesInfo() {
             const groupedDescription = [];
 
             //organizar as descrições 3 a 3
-            for (let i=0; i<descriptionItems.length; i+=3) {
+            for (let i = 0; i < descriptionItems.length; i += 3) {
                 groupedDescription.push(
-                    <div key={i/3}>
-                    <p>
-                        <strong>{descriptionItems[i]}</strong>{' '}
-                        {descriptionItems[i + 1]}{' '}
-                        {descriptionItems[i + 2]}
-                    </p>
-                </div>
+                    <div key={i / 3}>
+                        <p>
+                            <strong>{descriptionItems[i]}</strong>{' '}
+                            {descriptionItems[i + 1]}{' '}
+                            {descriptionItems[i + 2]}
+                        </p>
+                    </div>
                 )
             }
             return groupedDescription;
@@ -155,9 +155,12 @@ function CoursesInfo() {
                     </div>
                 ))}
             </div>
-            <div className="c-info-body">
-                {renderDescription()}
-            </div>
+            {/*Renderizar o div apenas quando o usuário clica na bandeira*/}
+            {currentCourse !== undefined && (
+                <div className="c-info-body">
+                    {renderDescription()}
+                </div>
+            )}
         </div>
     )
 };

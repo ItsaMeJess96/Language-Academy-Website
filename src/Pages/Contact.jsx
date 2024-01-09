@@ -1,5 +1,6 @@
 // página de contacto
 
+import '../Styles/Contact.css'
 import { useState } from "react";
 //import do mapa
 import MapContainer from "../Components/Map";
@@ -43,7 +44,8 @@ function Contact() {
     return (
         <div className="contact">
             <div className="c-message">
-                <h3>Tens alguma dúvida? Entra em contacto connosco!</h3>
+                <h3>Tens alguma dúvida?</h3> 
+                <h3>Entra em contacto connosco!</h3>
                 <form onSubmit={handleSubmit}>
                     <input type="text" name="name" placeholder="nome" id="c-name" required onChange={handleChange}/>
                     <input type="email" name="email" placeholder="e-mail" id="c-email" required onChange={handleChange}/>

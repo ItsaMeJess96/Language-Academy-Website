@@ -7,8 +7,8 @@ import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 function MapContainer () {
     // tamanho do mapa
     const mapStyle = {
-        height: '400px',
-        width: '600px'
+        height: '300px',
+        width: '300px'
     }
     // definir centro do mapa
     const defaultCenter = {
