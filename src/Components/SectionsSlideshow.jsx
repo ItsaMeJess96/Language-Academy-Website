@@ -51,7 +51,9 @@ const SectionsSlideshow = () => {
             {/* Navegar para slide anterior */}
             <i className="fi fi-ss-angle-left arrow-left" onClick={previousSlide}></i>
             {/* Imagem do slide */}
+            <div className="h-sections-img-container">
                 <img className="h-sections-img" src={slides[currentSlide].url} alt={slides[currentSlide].alt} />
+            </div>
             {/* Conteúdo do slide */}
             <div className="h-sections-content">
                 <h3 className="h-sections-content-text">{slides[currentSlide].title}</h3>

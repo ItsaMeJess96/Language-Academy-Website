@@ -1,5 +1,5 @@
 .courses {
-    padding: 1em;
+    padding: 8%;
 }
 
 .c-intro {
@@ -42,9 +42,10 @@
 
 .c-info-body {
     background-color: #3B6087;
+    border-radius: 16px;
     color: #FAF8F8;
     padding: 1em;
-    margin: 1em 0;
+    margin: 3em 0;
     line-height: 2;
     font-size: large;
 }
@@ -90,9 +91,6 @@
 /*configurações desktop*/
 
 @media screen and (min-width: 800px) {
-    .courses {
-        margin: 1em 10em;
-    }
     .c-intro {
         padding-bottom: 5em;
         font-size: larger;
@@ -102,7 +100,7 @@
     }
     .c-opportunities-container {
         font-size: large;
-        padding: 3em 0;
+        padding: 5em 0;
     }
     #icon-poliglota {
         width: 50%;

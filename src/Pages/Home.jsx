@@ -27,7 +27,7 @@ function Home() {
                         Estamos empenhados em fornecer uma experiência de aprendizagem de idiomas excepcional,
                         adaptada às tuas necessidades!
                     </p>
-                    <Link to='/contact' id='h-start-btn'>Começar Agora!</Link>
+                    <Link to='/signup' id='h-start-btn'>Começar Agora!</Link>
                 </div>
             </div>
             <div className="h-message">

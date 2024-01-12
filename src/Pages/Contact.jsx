@@ -57,7 +57,7 @@ function Contact() {
                 <p>Podes encontrar-nos em:</p>
                 <address> Rua da Amostra, 123; 1234-567 Lisboa, Portugal</address>
                 <MapContainer />
-                <p>Para mais informações, entra em contacto através do formulário acima ou visita-nos presencialmente</p>
+                <p>Para mais informações, entra em contacto através do formulário ou visita-nos presencialmente</p>
             </div>
         </div>
     )

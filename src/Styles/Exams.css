@@ -1,7 +1,7 @@
 /*secção introdutória*/
 
 .exams {
-    padding: 1em;
+    padding: 8%;
 }
 
 .e-intro {
@@ -73,13 +73,12 @@
 
 @media screen and ((min-width: 800px)) {
     .exams {
-        margin: 1em 10em;
         font-size: large;
     }
 
     .e-intro {
-        padding: 3em 0;
         line-height: 2;
+        padding-bottom: 1em;
     }
 
     .e-phases-img {

@@ -1,16 +1,17 @@
 .methodologies {
-    padding: 1em;
+    padding: 8%;
 }
 
 /*secção inicial*/
 .m-intro {
     display: flex;
     align-items: center;
+    text-align: center;
     padding-bottom: 1em;
 }
 
 #icon-translation {
-    width: 30%;
+    width: 25%;
     height: auto;
     object-fit: contain;
     padding-left: 0.5em;
@@ -86,13 +87,11 @@
         width: 10%;
     }
 
-    .m-intro {
-        padding: 2em 10em;
+    .m-intro,
+    .m-methods-text,
+    .m-interactive-methods {
         font-size: larger;
-    }
-
-    .m-methods {
-        padding: 1em 5em;
+        line-height: 1.5;
     }
 
     .m-method-titles button {
@@ -102,16 +101,18 @@
     .m-m-img {
         width: 20%;
     }
-    
-    .m-methods-text {
-        font-size: larger;
-        padding: 2em 8em;
-    }
 
-    .m-methods-body {
+    .m-methods-body,
+    .m-table {
         display: flex;
         align-items: center;
         width: 100%;
+        justify-content: center;
+    }
+
+    .m-table,
+    .m-interactive-methods {
+        margin: 4% 0;
     }
 
     .m-method-titles {
@@ -121,15 +122,4 @@
     .m-methods-body p {
         font-size: x-large;
     }
-
-    .m-interactive-methods {
-        margin: 2em 7em;
-        font-size: larger;
-    }
-
-    .m-table {
-        display: flex;
-        justify-content: center;
-    }
-
 }

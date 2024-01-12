@@ -58,12 +58,12 @@
 .h-message {
     display: flex;
     justify-content: center;
-    padding: 1em;
+    margin: 5%;
 }
 
 #icon-pc {
     width: 20%;
-    padding-right: 3em;
+    padding-right: 5%;
 }
 
 .h-m-exams {
@@ -84,28 +84,38 @@
 .h-sections {
     display: flex;
     align-items: center;
-    width: 100%;
-    height: auto;
-    position: relative;
     box-sizing: border-box;
-    justify-content: center;
+    justify-content: space-between;
+    height: 60vh;
+}
+
+.h-sections-img-container {
+    width: 20%;
+    flex-shrink: 0; 
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #3B6087;
 }
 
 .h-sections-img {
-    position: absolute;
-    width: 15%; 
-    height: 100%; 
-    object-fit: cover;
-    left: 1.7em;
-}
+    max-height: 100%;
+    height: auto;
+  }
 
 .h-sections-content {
-    width: 80%;
-    box-sizing: border-box;
-    padding: 1em;
+    width: 75%;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: #3B6087;
     color: #FAF8F8;
-    margin-left: 15%;
+    padding: 2%;
+    line-height: 1.4;
+    box-sizing: border-box;
+
 }
 
 .h-sections-content h3 {
@@ -113,10 +123,6 @@
     padding-bottom: 0.3em;
 }
 
-.h-sections-content :last-child {
-    padding-top: 0.3em;
-    font-size: 0.8em;
-}
 
 .section-link {
     text-decoration: none;
@@ -125,21 +131,22 @@
 
 .arrow-left, .arrow-right {
     color: #5C7389;
-    padding: 0.3em;
+    padding: 4%;
+    cursor: pointer;
 }
 
 /*secção convite*/
 
 .h-invitation {
     text-align: center;
-    padding: 1em 2em;
+    padding: 4% 8%;
 }
 
 .h-i-connect {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1em 0;
+    padding: 4% 8%;
 }
 
 #icon-message-mundo {
@@ -159,7 +166,6 @@
 
 .h-feedback {
     display: flex;
-    padding: 1em;
     align-items: center;
     justify-content: space-between;
 }
@@ -178,22 +184,10 @@
 /*configuração desktop*/
 
 @media screen and (min-width: 800px) {
-    .arrow-left {
-       margin: 0 1em 0 10em;
-    }
-    .arrow-right {
-        margin: 0 10em 0 1em;
-    }
-    .h-sections-img {
-        left: 12.7em;
-    }
-    .h-sections-content {
-        padding: 3em;
-    }
+
     .h-sections-content-text {
-        line-height: 1.5;
-        font-size: larger;
-        padding: 1em;
+        line-height: 2;
+        font-size: x-large;
     }
 
     .h-sections-content :last-child {
@@ -202,17 +196,13 @@
     }
     .h-sections-content h3 {
         font-size: 1.5em;
-        padding-left: 0.7em;
     }
-    .h-message {
-        padding: 5em 0;
-    }
+
     .h-m-exams {
         font-size: x-large;
         line-height: 2;
     }
     .h-invitation {
-        margin: 5em 10em 03em 10em;
         font-size: larger;
         line-height: 1.5;
     }
@@ -221,7 +211,7 @@
     }
     .h-intro-invitation {
         font-size: x-large;
-        padding: 2em 10em;
+        padding: 3%;
     }
     .h-invitation :first-child {
         margin-bottom: 1em;
