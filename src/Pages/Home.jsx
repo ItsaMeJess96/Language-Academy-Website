@@ -6,9 +6,10 @@ import '../Styles/Home.css'
 import iconMundo from '../Assets/Icons/languages.png';
 import iconMessage from '../Assets/Icons/online-lesson.png'
 import iconMundoTalk from '../Assets/Icons/language.png'
-//import slideshow das secções e comentários
+//import slideshow das secções, comentários e banner para aceitar cookies
 import SectionsSlideshow from "../Components/SectionsSlideshow";
 import CommentsSlideshow from "../Components/ComentsSlideshow";
+import CookieBanner from '../Components/BannerCookies';
 
 function Home() {
     return (
@@ -52,6 +53,7 @@ function Home() {
                 </div>
             </div>
             <CommentsSlideshow />
+            <CookieBanner />
         </div>
     )
 }
