@@ -9,7 +9,7 @@ export default defineConfig({
     emptyOutDir: true, 
     rollupOptions: {
       input: {
-        main: 'src/main.js',
+        main: 'src/main.jsx',
       },
     },
   },
