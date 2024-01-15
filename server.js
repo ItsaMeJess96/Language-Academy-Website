@@ -6,7 +6,7 @@ const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = 3000; 
+const port = process.env.PORT || 3000;
 
 // Configurar o middleware para analisar o corpo da solicitação como JSON
 app.use(bodyParser.json());
