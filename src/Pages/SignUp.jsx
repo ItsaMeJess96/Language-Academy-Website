@@ -17,20 +17,35 @@ function SignUp() {
                 <img id='icon-signUp' src={iconPC} alt="ecrã a mostrar aula online" />
             </div>
             <div className='s-form-container'>
-                <form  className='s-form'>
-                    <label htmlFor='username'>Nome de utilizador:</label>
-                    <input type='text' id='s-username' name='username' required />
-                    <label htmlFor='email'>Email:</label>
-                    <input type='email' id='s-email' name='email' required />
-                    <label htmlFor='password'>Password:</label>
-                    <input type='password' id='s-password' name='password' required />
-                    <label htmlFor='password-repeat'>Repetir password:</label>
+                <form  className='s-form' onSubmit={validarForm}>
+                    <label htmlFor='s-username'>Nome de utilizador:</label>
+                    <input type='text' id='s-username' name='username' autoComplete='username' required />
+                    <label htmlFor='s-email'>Email:</label>
+                    <input type='email' id='s-email' name='email' autoComplete='email' required />
+                    <label htmlFor='s-password'>Password:</label>
+                    <input type='password' id='s-password' name='password' autoComplete='new-password' required />
+                    <label htmlFor='s-password-repeat'>Repetir password:</label>
                     <input type='password' id='s-password-repeat' name='password-repeat' required />
                     <input type="submit" value='Registar' />
                 </form>
             </div>
         </div>
     )
+}
+
+//função para validar o formulário
+function validarForm () {
+    var pass = document.getElementById('s-password').value;
+    var passRepetida = document.getElementById('s-password-repeat').value;
+
+    if (pass !== passRepetida) {
+        document.getElementById('s-password').value = '';
+        document.getElementById('s-password-repeat').value = '';
+        document.getElementById('s-password').placeholder = 'As passwords não coincidem';
+        document.getElementById('s-password-repeat').placeholder = 'As passwords não coincidem';
+        return false; //assim impede o envio do formulário se as passwords não coincidirem
+    }
+    return true;
 }
 
 export default SignUp;

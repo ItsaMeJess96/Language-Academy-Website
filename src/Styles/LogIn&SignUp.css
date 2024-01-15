@@ -1,7 +1,7 @@
 /*Estilos para a página de log in e sign up*/
 
 .log-in, .sign-up {
-    margin: 4%;
+    margin: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,14 +56,7 @@
 /*configurações desktop*/
 
 @media screen and (min-width: 800px) {
-    .l-form, .s-form, .s-intro {
-        width: 60%;
-    }
-    .l-form-container, .s-form-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+
     #icon-logIn, #icon-signUp {
         width: 10%;
     }
