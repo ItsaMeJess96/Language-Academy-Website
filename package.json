@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "vite",
+    "start": "npx vite",
     "build": "vite build",
     "dev": "vite",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
@@ -12,6 +12,7 @@
     "deploy": "vite build && cyclic.sh deploy"
   },
   "dependencies": {
+    "vite": "^5.0.11",
     "@flaticon/flaticon-uicons": "^3.0.0",
     "@react-google-maps/api": "^2.19.2",
     "body-parser": "^1.20.2",
