@@ -3,7 +3,7 @@ Vai renderizar essa tabela a partir do array de dados, vai agrupar os dados que 
 
 // Dados a serem usados na tabela: nome do exame, níveis, data e requisitos (caso não tenha nível, data ou requisitos, colocar info nos requisitos)
 
-const examsData = [
+export const examsData = [
     {
         exam: 'Inglês - Diploma in English as a Foreign Language',
         level: 'Básico, Intermédio e Avançado',

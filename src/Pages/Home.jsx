@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 import '../Styles/Home.css'
 //import icons
 import iconMundo from '../Assets/Icons/languages.png';
-import iconMessage from '../Assets/Icons/online-lesson.png'
 import iconMundoTalk from '../Assets/Icons/language.png'
-//import slideshow das secções, comentários e banner para aceitar cookies
+//import slideshow das secções, comentários, mensagem dinâmica e banner para aceitar cookies
 import SectionsSlideshow from "../Components/SectionsSlideshow";
 import CommentsSlideshow from "../Components/ComentsSlideshow";
 import CookieBanner from '../Components/BannerCookies';
+import DinamicMessage from '../Components/DinamicMessage';
 
 function Home() {
     return (
@@ -31,14 +31,7 @@ function Home() {
                     <Link to='/signup' id='h-start-btn'>Começar Agora!</Link>
                 </div>
             </div>
-            <div className="h-message">
-                <img id='icon-pc' src={iconMessage} alt='pessoa a anunciar mensagem num ecran' />
-                <div className='h-m-exams'>
-                    <h3>Próximo exame:</h3>
-                    <p>Inglês - 5 de março 2024</p>
-                    <Link to='/exams' id='see-all-btn'>Ver todos</Link>
-                </div>
-            </div>
+            <DinamicMessage />
             <SectionsSlideshow />
             <div className="h-invitation">
                 <h3>Junta-te a Nós!</h3>
