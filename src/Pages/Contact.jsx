@@ -20,14 +20,14 @@ function Contact() {
     };
 
     /* função a ser chamada quando o formulário é enviado
-     previne o comportamento padrão e faz solicitação POST para o <servidor></servidor> */ 
+     previne o comportamento padrão e faz solicitação POST para o <servidor></servidor> */
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:3000/enviar-email', {
+            const response = await fetch('http://localhost:3000/send-email', {
                 method: 'POST',
-                hearders: { 'Content-Type': 'application/json' },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
             });
             if (response.ok) {
@@ -37,18 +37,19 @@ function Contact() {
             }
         } catch (error) {
             console.error('Erro inesperado: ', error)
-        } 
+        }
     };
-    
+
+
 
     return (
         <div className="contact">
             <div className="c-message">
-                <h3>Tens alguma dúvida?</h3> 
+                <h3>Tens alguma dúvida?</h3>
                 <h3>Entra em contacto connosco!</h3>
                 <form onSubmit={handleSubmit}>
-                    <input type="text" name="name" placeholder="nome" id="c-name" autoComplete='name' required onChange={handleChange}/>
-                    <input type="email" name="email" placeholder="e-mail" id="c-email" autoComplete='email' required onChange={handleChange}/>
+                    <input type="text" name="name" placeholder="nome" id="c-name" autoComplete='name' required onChange={handleChange} />
+                    <input type="email" name="email" placeholder="e-mail" id="c-email" autoComplete='email' required onChange={handleChange} />
                     <textarea name="message" id="c-message" required onChange={handleChange}></textarea>
                     <input type="submit" value="submeter" />
                 </form>

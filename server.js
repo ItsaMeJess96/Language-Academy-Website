@@ -10,37 +10,39 @@ const port = process.env.PORT || 3000;
 
 // Configurar o middleware para analisar o corpo da solicitação como JSON
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended:true }));
+
+// Configurar o transporte de e-mail
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
+    }
+});
 
 // Rota para lidar com a solicitação POST do formulário
 app.post('/enviar-email', async (req, res) => {
     const { name, email, message } = req.body;
 
-    // Configurar o transporte de e-mail
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS
-        }
-    });
 
     // Configurar o e-mail a ser enviado
     const mailOptions = {
-        from: 'seu_email@gmail.com', // Coloque o seu e-mail aqui
-        to: 'culturalia.academia@gmail.com', // Coloque o e-mail de destino aqui
-        subject: 'Novo formulário de contato',
-        text: `Nome: ${name}\nEmail: ${email}\nMensagem: ${message}`
+        from: email,
+        to: 'culturalia.academia@gmail.com', 
+        subject: `Nova mensagem de ${name}`,
+        text: message
     };
 
-    try {
-        // Enviar o e-mail
-        await transporter.sendMail(mailOptions);
-        console.log('Email enviado com sucesso!');
-        res.status(200).json({ success: true });
-    } catch (error) {
-        console.error('Erro ao enviar o e-mail:', error);
-        res.status(500).json({ success: false, error: 'Erro ao enviar o e-mail' });
-    }
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.error(error);
+            res.status(500).send('Erro ao enviar o e-mail.');
+        } else {
+            console.log('Email enviado: ' + info.response);
+            res.status(200).send('Email enviado com sucesso!');
+        }
+    });
 });
 
 // Iniciar o servidor
