@@ -1,7 +1,7 @@
 // página em que o usuário se pode inscrever na plataforma
 
 import '../Styles/LogIn&SignUp.css'
-import iconPC from '../Assets/Icons/online-lesson2.png'
+import iconPC from '/Assets/Icons/online-lesson2.png'
 
 function SignUp() {
     return (

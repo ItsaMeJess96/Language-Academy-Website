@@ -8,7 +8,7 @@ import React, { useState } from "react";
 
 const coursesData = [
     {
-        img: 'src/Assets/Icons/united-kingdom.png',
+        img: '/Assets/Icons/united-kingdom.png',
         alt: 'bandeira do Reino Unido',
         title: 'Inglês',
         description: [
@@ -18,7 +18,7 @@ const coursesData = [
         ]
     },
     {
-        img: 'src/Assets/Icons/france.png',
+        img: '/Assets/Icons/france.png',
         alt: 'bandeira da França',
         title: 'Francês',
         description: [
@@ -28,7 +28,7 @@ const coursesData = [
         ]
     },
     {
-        img: 'src/Assets/Icons/spain.png',
+        img: '/Assets/Icons/spain.png',
         alt: 'bandeira de Espanha',
         title: 'Espanhol',
         description: [
@@ -38,7 +38,7 @@ const coursesData = [
         ]
     },
     {
-        img: 'src/Assets/Icons/italy.png',
+        img: '/Assets/Icons/italy.png',
         alt: 'bandeira de Itália',
         title: 'Italiano',
         description: [
@@ -48,7 +48,7 @@ const coursesData = [
         ]
     },
     {
-        img: 'src/Assets/Icons/germany.png',
+        img: '/Assets/Icons/germany.png',
         alt: 'bandeira da Alemanha',
         title: 'Alemão',
         description: [
@@ -58,7 +58,7 @@ const coursesData = [
         ]
     },
     {
-        img: 'src/Assets/Icons/portugal.png',
+        img: '/Assets/Icons/portugal.png',
         alt: 'bandeira de Portugal',
         title: 'Português',
         description: [
@@ -66,7 +66,7 @@ const coursesData = [
         ]
     },
     {
-        img: 'src/Assets/Icons/china.png',
+        img: '/Assets/Icons/china.png',
         alt: 'bandeira da China',
         title: 'Chinês',
         description: [
@@ -74,7 +74,7 @@ const coursesData = [
         ]
     },
     {
-        img: 'src/Assets/Icons/japan.png',
+        img: '/Assets/Icons/japan.png',
         alt: 'bandeira do Japão',
         title: 'Japonês',
         description: [
@@ -82,7 +82,7 @@ const coursesData = [
         ]
     },
     {
-        img: 'src/Assets/Icons/india.png',
+        img: '/Assets/Icons/india.png',
         alt: 'bandeira da India',
         title: 'Hindi',
         description: [
@@ -90,7 +90,7 @@ const coursesData = [
         ]
     },
     {
-        img: 'src/Assets/Icons/united-arab-emirates.png',
+        img: '/Assets/Icons/united-arab-emirates.png',
         alt: 'bandeira dos emirados árabes unidos',
         title: 'Árabe',
         description: [
@@ -98,7 +98,7 @@ const coursesData = [
         ]
     },
     {
-        img: 'src/Assets/Icons/russia.png',
+        img: '/Assets/Icons/russia.png',
         alt: 'bandeira da Russia',
         title: 'Russo',
         description: [
@@ -149,7 +149,7 @@ function CoursesInfo() {
                 {/* Vai mapear pelo array e renderiza um bloco para cada elemento */}
                 {coursesData.map((course, index) => (
                     // usamos a propriedade key para ajudar o react a identificar cada elemento durante as atualizações
-                    <div className="c-flag-container" key={index} onClick={() => handleCourseClick(index)}>
+                    <div className="c-flag-container" style={{cursor: "pointer"}} key={index} onClick={() => handleCourseClick(index)}>
                         <img className="c-flag-img" src={course.img} alt={course.alt} />
                         <p className="c-flag-text">{course.title}</p>
                     </div>

@@ -3,7 +3,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import { examsData } from './ExamsTable';
-import iconMessage from '../Assets/Icons/online-lesson.png'
+import iconMessage from '/Assets/Icons/online-lesson.png'
 
 function DinamicMessage() {
 

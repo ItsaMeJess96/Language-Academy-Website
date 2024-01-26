@@ -3,7 +3,7 @@
 import '../Styles/Courses.css'
 import { Link } from 'react-router-dom';
 //import icon
-import iconPoliglota from '../Assets/Icons/bilingual.png';
+import iconPoliglota from '/Assets/Icons/bilingual.png';
 //import dos cursos disponíveis e sua informação
 import CoursesInfo from '../Components/CoursesInfo';
 

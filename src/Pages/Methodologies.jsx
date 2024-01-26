@@ -2,7 +2,7 @@
 
 //import icons
 import '../Styles/Methodologies.css'
-import iconTradução from '../Assets/Icons/translation.png'
+import iconTradução from '/Assets/Icons/translation.png'
 //import tabela com horário e metodologias interativas
 import ScheduleClasses from "../Components/ScheduleClasses";
 import InteractiveMethodologies from "../Components/InteractiveMethodologies";

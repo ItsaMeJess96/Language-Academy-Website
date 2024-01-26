@@ -3,8 +3,8 @@
 import { Link } from 'react-router-dom';
 import '../Styles/Home.css'
 //import icons
-import iconMundo from '../Assets/Icons/languages.png';
-import iconMundoTalk from '../Assets/Icons/language.png'
+import iconMundo from '/Assets/Icons/languages.png';
+import iconMundoTalk from '/Assets/Icons/language.png'
 //import slideshow das secções, comentários, mensagem dinâmica e banner para aceitar cookies
 import SectionsSlideshow from "../Components/SectionsSlideshow";
 import CommentsSlideshow from "../Components/ComentsSlideshow";

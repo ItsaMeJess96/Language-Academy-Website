@@ -1,6 +1,6 @@
 //Componente que renderiza a página de erro
 
-import errorGif from '../Assets/Icons/warning.gif'
+import errorGif from '/Assets/Icons/warning.gif'
 
 function ErrorPage() {
     return (

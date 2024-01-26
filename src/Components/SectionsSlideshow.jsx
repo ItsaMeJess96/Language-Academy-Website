@@ -11,7 +11,7 @@ const slides = [
         title: 'Metodologias de Ensino',
         text: 'Na Culturália, acreditamos que aprender um novo idioma deve ser envolvente, prático e divertido. As nossas metodologias inovadoras são projetadas para garantir que não só compreendes o idioma, mas também o uses com confiança em situações do mundo real.',
         finalMessage: 'Sabe mais sobre as nossas ',
-        url: 'src/Assets/Img/pexels-august-de-richelieu-4260477.jpg',
+        url: '/Assets/Img/pexels-august-de-richelieu-4260477.jpg',
         alt: 'pessoa a trabalhar num computador',
         link: '/methodologies'
     },
@@ -20,7 +20,7 @@ const slides = [
         title: 'Exames de Proficiência',
         text: 'Desafia-te e prova os teus conhecimentos linguísticos! Oferecemos uma vasta gama de exames de proficiência em diferentes línguas, permitindo-te demonstrar os teus conhecimentos e competências em línguas estrangeiras.',
         finalMessage: 'Vê todos os ',
-        url: 'src/Assets/Img/pexels-karolina-grabowska-8106679.jpg',
+        url: '/Assets/Img/pexels-karolina-grabowska-8106679.jpg',
         alt: 'pessoa a segurar diploma',
         link: '/exams'
     },
@@ -29,7 +29,7 @@ const slides = [
         title: 'Os Nossos Cursos',
         text: 'Quer sejas um principiante à procura de construir bases de uma nova língua ou um utilizador avançado que procura melhorar as suas competências, oferecemos uma variedade de cursos de línguas para satisfazer as tuas necessidades.',
         finalMessage: 'Explora os nossos ',
-        url: 'src/Assets/Img/pexels-nastyasensei-335393.jpg',
+        url: '/Assets/Img/pexels-nastyasensei-335393.jpg',
         alt: 'globo',
         link: '/courses'
     }

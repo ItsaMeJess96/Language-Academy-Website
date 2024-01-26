@@ -1,7 +1,7 @@
 // página em que o usuário faz log in
 
 import '../Styles/LogIn&SignUp.css'
-import iconScrabble from '../Assets/Icons/scrabble.png'
+import iconScrabble from '/Assets/Icons/scrabble.png'
 import { Link } from 'react-router-dom';
 
 function LogIn() {

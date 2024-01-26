@@ -48,7 +48,7 @@ function NavBar() {
 
                 {/* Mobile Links */}
                 <div className="mobile-menu-icon" onClick={toggleDropdown}>
-                    <i className="fi fi-br-menu-burger" ></i>
+                    <i className="fi fi-br-menu-burger" style={{cursor: "pointer"}}></i>
                     {/* Se for clicado vai renderizar links */}
                     {isDropdownOpen && (
                         <ul className="mobile-links-container">

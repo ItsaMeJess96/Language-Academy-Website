@@ -7,35 +7,35 @@ const phases = [
         title: '1. Inscrição',
         text1: 'Preenche o formulário de inscrição online ou visita a nossa sede',
         text2: 'Escolhe o exame desejado e forneçe as informações necessárias',
-        img: 'src/Assets/Icons/exam.png',
+        img: '/Assets/Icons/exam.png',
         alt: 'caneta e folha de exame'
     },
     {
         title: '2. Preparação',
         text1: 'Utiliza o nosso programa de estudos especializado para te preparares',
         text2: 'Participa em sessões de revisão e tutorias personalizadas',
-        img: 'src/Assets/Icons/translator (1).png',
+        img: '/Assets/Icons/translator (1).png',
         alt : 'pessoa no computador'
     },
     {
         title: '3. Exame teórico',
         text1: 'Realiza o exame escrito conforme a data agendada',
         text2: 'Demonstra as tuas habilidades linguísticas em leitura, escrita e compreensão oral',
-        img: 'src/Assets/Icons/test.png',
+        img: '/Assets/Icons/test.png',
         alt: 'folha com exame'
     },
     {
         title: '4. Exame prático (se aplicável)',
         text1: 'Alguns exames incluem uma componente prática',
         text2: 'Esta fase avalia as tuas habilidades de comunicação verbal',
-        img: 'src/Assets/Icons/pronunciation.png',
+        img: '/Assets/Icons/pronunciation.png',
         alt: 'lábios com caixa de fala'
     },
     {
         title: '5. Resultados',
         text1: 'Recebe os resultados após a avaliação',
         text2: 'Os certificados são emitidos para os candidatos bem-sucedidos',
-        img: 'src/Assets/Icons/certificate.png',
+        img: '/Assets/Icons/certificate.png',
         alt: 'diploma'
     }
 ]
