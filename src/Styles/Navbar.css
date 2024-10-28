@@ -8,6 +8,21 @@ nav {
     align-items: center;
     width: 100%;
     box-sizing: border-box;
+    position: relative;
+    padding-top: 60px;
+}
+
+.new-banner {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #FABD62;
+    left: 0;
+    padding: 12px;
+}
+
+.new-banner a {
+    color: #141414;
 }
 
 .nav-links, .login, .signup {

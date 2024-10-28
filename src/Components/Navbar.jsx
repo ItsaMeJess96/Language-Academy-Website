@@ -26,6 +26,9 @@ function NavBar() {
 
     return (
         <nav>
+            <div className="new-banner">
+                <p>Existe uma versão melhor deste website! <a href="https://culturalia-project-remade.netlify.app/">Carrega aqui para ver</a></p>
+            </div>
             <div className="logo">
                 <Link to="/" className="nav-links">Culturália.</Link>
             </div>
